@@ -4,9 +4,14 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Base64ToImageAnimator"
+        xmlns:l="clr-namespace:Base64ToImageAnimator.ViewModels"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-
+        Height="450" Width="800">
+    <Window.DataContext>
+        <l:ViewModel />
+    </Window.DataContext>
+    <Grid Background="Green">
+        <Image x:Name="img" Source="{Binding PrimaryImage}" Height="100" Width="100"/>
+        <Button Click="Button_Click" Height="50" Width="120" VerticalAlignment="Bottom" Content="Animate Spritesheet"/>
     </Grid>
 </Window>

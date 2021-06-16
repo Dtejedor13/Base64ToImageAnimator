@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using Base64ToImageAnimator.ViewModels;
+using System.Windows;
 
 namespace Base64ToImageAnimator
 {
@@ -10,6 +11,11 @@ namespace Base64ToImageAnimator
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            ((ViewModel)(DataContext)).LunchAnnimation();
         }
     }
 }
