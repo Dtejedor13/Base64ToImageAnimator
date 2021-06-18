@@ -6,12 +6,12 @@
         xmlns:local="clr-namespace:Base64ToImageAnimator"
         xmlns:l="clr-namespace:Base64ToImageAnimator.ViewModels"
         mc:Ignorable="d"
-        Height="450" Width="800">
+        Title="{Binding FileName}" Height="450" Width="800">
     <Window.DataContext>
         <l:ViewModel />
     </Window.DataContext>
     <Grid Background="Green">
-        <Image x:Name="img" Source="{Binding PrimaryImage}" Height="100" Width="100"/>
+        <Image x:Name="img" Source="{Binding PrimaryImage}" Height="{Binding FrameHeight}" Width="{Binding FrameWidht}"/>
         <Button Click="Button_Click" Height="50" Width="120" VerticalAlignment="Bottom" Content="Animate Spritesheet"/>
     </Grid>
 </Window>

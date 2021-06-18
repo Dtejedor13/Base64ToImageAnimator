@@ -8,15 +8,25 @@
 
   <ItemGroup>
     <None Remove="Data\Data.json" />
+    <None Remove="Data\results.json" />
   </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Include="Data\Data.json" />
+    <EmbeddedResource Include="Data\results.json" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     <PackageReference Include="System.Drawing.Common" Version="5.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Models\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Base64ConverterCore\Base64ConverterCore.csproj" />
   </ItemGroup>
 
 </Project>
