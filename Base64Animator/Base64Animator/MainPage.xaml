@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Base64Animator.MainPage">
+
+    <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <Image Source="{Binding BgSource}"
+                    HorizontalOptions="Fill"
+                    VerticalOptions="Fill"
+                    Aspect="Fill"/>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="6*" />
+                <RowDefinition Height="1*" />
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0" BackgroundColor="Transparent">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*" />
+                    <ColumnDefinition Width="8*" />
+                </Grid.ColumnDefinitions>
+                <Label Text="AnimationType " TextColor="Yellow" HorizontalTextAlignment="Center"/>
+                <Picker Grid.Column="1" FontSize="12" FontFamily="bold" TextColor="Yellow" ItemsSource="{Binding AnimationTypes}" SelectedIndex="{Binding CbxAnimationTypeSelectedIndex}"/>
+            </Grid>
+
+            <Grid Grid.Row="1"  BackgroundColor="Transparent">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*" />
+                    <ColumnDefinition Width="8*" />
+                </Grid.ColumnDefinitions>
+                <Label Text="UnitID " TextColor="Red" HorizontalTextAlignment="Center"/>
+                <Picker Grid.Column="1" FontSize="12" FontFamily="bold" TextColor="Red" ItemsSource="{Binding UnitIDs}" SelectedIndex="{Binding CbxUnitIDsSelectedIndex}" />
+            </Grid>
+
+            <Grid Grid.Row="2"  BackgroundColor="Transparent">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*" />
+                    <ColumnDefinition Width="8*" />
+                </Grid.ColumnDefinitions>
+                <Label Text="FormID " TextColor="Blue" HorizontalTextAlignment="Center"/>
+                <Picker Grid.Column="1" FontSize="12" FontFamily="bold" TextColor="Blue" ItemsSource="{Binding FormIDs}" SelectedIndex="{Binding CbxFormIDsSelectedIndex}" />
+            </Grid>
+
+            <Image Source="{Binding PrimaryImage}" Grid.Row="3" />
+
+            <Button Background="Orange" Clicked="Button_Clicked" Text="Animate Spritesheet" Grid.Row="4"/>
+        </Grid>
+    </Grid>
+
+</ContentPage>
