@@ -4,7 +4,8 @@ namespace Base64ConverterCore.Models
 {
     public class DataModel
     {
-        public List<string> bs { get; set; }
-        public FrameProperties bs_props { get; set; }
+        public int id {get; set; }
+        public int formID { get; set; }
+        public List<AnimationSet> animationsets { get; set; }
     }
 }

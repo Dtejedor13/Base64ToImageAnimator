@@ -11,6 +11,10 @@
         <l:ViewModel />
     </Window.DataContext>
     <Grid Background="Green">
+        <ComboBox Grid.Row="0" VerticalAlignment="Top" HorizontalAlignment="Center" Width="250" Height="30" ItemsSource="{Binding AnimationTypes}" SelectedIndex="{Binding CbxAnimationTypeSelectedIndex}"/>
+        <ComboBox VerticalAlignment="Top" HorizontalAlignment="Left" Width="50" Height="30" IsReadOnly="True" ItemsSource="{Binding UnitIDs}" SelectedIndex="{Binding CbxUnitIDsSelectedIndex}" />
+        <ComboBox VerticalAlignment="Top" HorizontalAlignment="Right" Width="50" Height="30" IsReadOnly="True" ItemsSource="{Binding FormIDs}" SelectedIndex="{Binding CbxFormIDsSelectedIndex}" />
+
         <Image x:Name="img" Source="{Binding PrimaryImage}" Height="{Binding FrameHeight}" Width="{Binding FrameWidht}"/>
         <Button Click="Button_Click" Height="50" Width="120" VerticalAlignment="Bottom" Content="Animate Spritesheet"/>
     </Grid>
